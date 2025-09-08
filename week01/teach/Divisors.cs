@@ -1,6 +1,8 @@
 public static class Divisors {
     /// <summary>
     /// Entry point for the Divisors class
+    
+
     /// </summary>
     public static void Run() {
         List<int> list = FindDivisors(80);
@@ -17,7 +19,17 @@ public static class Divisors {
     /// <param name="number">The number to find the divisor</param>
     /// <returns>List of divisors</returns>
     private static List<int> FindDivisors(int number) {
-        List<int> results = new();
+        List<int> results = new List<int>();
+        // creating a loop to loop according to the lent of the number
+        for (int i = 1; i < number; i++)
+        {
+            if ( number % i == 0)
+            {
+                results.Add(i);
+            }
+            
+            
+        }
         // TODO problem 1
         return results;
     }
